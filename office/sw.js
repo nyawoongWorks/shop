@@ -37,9 +37,10 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
 
   // 화면(HTML): 네트워크 우선, 끊기면 캐시된 index
+  // (HTTP 캐시까지 건너뛰어 배포 직후에도 바로 최신 HTML을 받는다)
   if (req.mode === 'navigate') {
     event.respondWith(
-      fetch(req)
+      fetch(req, { cache: 'no-store' })
         .then((res) => {
           const copy = res.clone();
           caches.open(CACHE).then((c) => c.put('./index.html', copy)).catch(() => {});
