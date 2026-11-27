@@ -1,5 +1,5 @@
 /* 냐웅 비서실 서비스 워커 — 설치 요건 충족 + 가벼운 오프라인 캐시 */
-const CACHE = 'nyawoong-office-v1';
+const CACHE = 'nyawoong-office-v2';
 const PRECACHE = [
   './',
   './index.html',
