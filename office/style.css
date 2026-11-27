@@ -187,6 +187,10 @@ button.chip.off{color:var(--muted)}
 .links .s{color:#A98F73;font-weight:700;font-size:10.5px;white-space:nowrap}
 .close{display:block;width:100%;margin-top:12px;font:inherit;font-size:13px;font-weight:800;color:#6B452B;background:#F3E8D8;border:1px solid #E7D6BE;border-radius:13px;padding:12px;cursor:pointer}
 
+@media (max-width:420px){
+  .hot{font-size:9px;padding:3px 6px}
+  .tab{font-size:10px}
+}
 @media (min-width:560px){
   body{background:radial-gradient(90% 55% at 50% 0%,#F4EBDA 0%,#EADDC7 62%,#E1D2B9 100%)}
   .app{
