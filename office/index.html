@@ -5,13 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>냐웅 비서실 · 뚱냥이 본부</title>
 <meta name="description" content="냐웅님 전용 비서실 대시보드 — 5개 파트 현황, 결정 대기 안건, 정기 루틴을 한 화면에서.">
-<meta name="theme-color" content="#F6EFE3">
+<meta name="theme-color" content="#f6efe4">
 <meta property="og:title" content="냐웅 비서실 · 뚱냥이 본부">
 <meta property="og:description" content="5개 파트가 대기 중 — 파트별 최신 현황과 결정 대기 안건을 모았어요.">
 <meta property="og:image" content="https://nyawoongworks.github.io/shop/office/img/office.webp">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="냐웅 비서실">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/icon-512.png">
+<link rel="apple-touch-icon" sizes="192x192" href="img/icon-192.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -142,5 +149,14 @@
 
 <script src="data.js"></script>
 <script src="app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js', { scope: './' }).catch(function (err) {
+        console.warn('[app] 서비스 워커 등록 실패', err);
+      });
+    });
+  }
+</script>
 </body>
 </html>
