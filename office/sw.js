@@ -8,8 +8,8 @@ const PRECACHE = [
   './data.js',
   './manifest.webmanifest',
   './img/office.webp',
-  './img/icon-192.png',
-  './img/icon-512.png'
+  './img/icon-192-v2.png',
+  './img/icon-512-v2.png'
 ];
 
 self.addEventListener('install', (event) => {
